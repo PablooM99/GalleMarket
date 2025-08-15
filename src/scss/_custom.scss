@@ -368,53 +368,62 @@ footer {
 
 /* Carrito */
 .carrito-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  margin: 2rem 0;
-  padding: 0;
-
-  .carrito-item {
-    border: 1px solid #ccc;
-    padding: 1rem;
-    border-radius: 8px;
-    text-align: center;
-
-    img {
-      max-width: 100%;
-      height: auto;
-      margin-bottom: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+    margin: 12px 0;
+    padding: 0 8px;
+  
+    @media (min-width: $bp-md) {
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
     }
-
-    button {
-      padding: 0.5rem 1rem;
-      border: none;
-      background-color: #ddd;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-
-      &:hover {
-        background-color: #bbb;
+  
+    .carrito-item {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: .75rem;   
+      text-align: center;
+  
+      h3 { font-size: 1rem; margin: .25rem 0 .35rem; }
+      p  { font-size: .9rem;  margin: .25rem 0; }
+  
+      img {
+        width: 100%;
+        max-width: 140px;
+        height: 110px;
+        object-fit: contain; 
+        display: block;
+        margin: .5rem auto;
+      }
+  
+      .qty,
+      .carrito__qty {
+        display: inline-flex; align-items: center; gap: .25rem;
+        .btn { width: 28px; height: 28px; padding: 0; }
+        .form-control { width: 48px; height: 28px; padding: 0; text-align: center; }
+      }
+  
+      button {
+        padding: .4rem .7rem; 
+        font-size: .9rem;
+        border-radius: .5rem;
       }
     }
   }
-}
-
-.carrito-total {
-  margin-top: 2rem;
-  text-align: center;
-
-  button {
-    padding: 0.5rem 1rem;
-    border: none;
-    background-color: #ddd;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-
-    &:hover {
-      background-color: #bbb;
+  
+  .carrito-total {
+    margin-top: 12px;
+    padding: .75rem;  
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+  
+    h2 { font-size: 1.1rem; margin: 0 0 .5rem; }
+  
+    button {
+      padding: .5rem .9rem;
+      font-size: .95rem;
+      border-radius: .5rem;
     }
   }
-}
