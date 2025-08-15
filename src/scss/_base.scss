@@ -1,0 +1,9 @@
+@use "variables" as *;
+
+// Reglas base
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: $font-base; color: $text; background: $bg; line-height: 1.5; }
+h1, h2, h3, h4 { font-family: $font-heading; line-height: 1.2; }
+img { max-width: 100%; height: auto; display: block; }
+a { text-decoration: none; }

@@ -1,0 +1,12 @@
+// Helpers de layout (Flex + Grid)
+.container-narrow { max-width: 980px; margin: 0 auto; padding: 0 1rem; }
+
+.grid-auto {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.flex-center {
+  display: flex; align-items: center; justify-content: center; gap: .5rem;
+}
